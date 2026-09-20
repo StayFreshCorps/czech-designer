@@ -16,7 +16,7 @@ export function Header({ email }: { email: string }) {
         <Link href="/" className="font-display text-[15px] font-semibold tracking-tight">
           Petr Kaloč
         </Link>
-        <nav className="hidden items-center gap-8 text-[13px] tracking-wide md:flex">
+        <nav className="flex items-center gap-4 text-[12px] tracking-wide sm:gap-8 sm:text-[13px]">
           {links.map((link) => (
             <Link key={link.href} href={link.href} className="text-ink/70 hover:text-accent">
               {link.label}

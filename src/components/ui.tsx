@@ -36,7 +36,7 @@ export function Button({
   return (
     <a
       href={href}
-      className={`inline-flex items-center justify-center rounded-full px-6 py-3 text-[13px] font-medium tracking-wide transition-colors ${variant === 'solid' ? solid : ghost} ${className}`}
+      className={`inline-flex items-center justify-center rounded-full px-6 py-3 text-[13px] font-medium tracking-wide transition-colors ${variant === 'solid' ? solid : ghost}${className ? ` ${className}` : ''}`}
       {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
     >
       {children}
