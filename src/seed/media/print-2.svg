@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img">
+  <rect width="1600" height="1000" fill="#000"/>
+  <text x="80" y="90" fill="#F4F1EC" font-family="Arial, sans-serif" font-size="14" letter-spacing="6">FACTORY PRINT</text>
+  <polygon points="200,780 520,220 900,780" fill="none" stroke="#F4F1EC" stroke-width="1"/>
+  <polygon points="700,780 1100,180 1500,780" fill="#F4F1EC"/>
+  <rect x="80" y="860" width="200" height="8" fill="#0A3DFF"/>
+  <text x="80" y="920" fill="#F4F1EC" font-family="Arial, sans-serif" font-size="20">Sublimation · large format · vehicle wraps</text>
+</svg>

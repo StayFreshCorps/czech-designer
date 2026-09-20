@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img">
+  <rect width="1600" height="1000" fill="#000"/>
+  <text x="80" y="90" fill="#F4F1EC" font-family="Arial, sans-serif" font-size="14" letter-spacing="6">GOOGLE  ·  META  ·  PPC</text>
+  <text x="80" y="220" fill="#F4F1EC" font-family="Arial, sans-serif" font-size="64" font-weight="700">SMART OBJECT</text>
+  <text x="80" y="300" fill="#F4F1EC" font-family="Arial, sans-serif" font-size="64" font-weight="700">SYSTEM</text>
+  <rect x="80" y="360" width="160" height="8" fill="#0A3DFF"/>
+  <rect x="80" y="520" width="1440" height="380" fill="#F4F1EC"/>
+  <rect x="140" y="580" width="400" height="260" fill="#000"/>
+  <rect x="600" y="580" width="400" height="260" fill="#000"/>
+  <rect x="1060" y="580" width="400" height="260" fill="#000"/>
+</svg>

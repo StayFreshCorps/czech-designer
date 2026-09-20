@@ -1,0 +1,59 @@
+@import '@fontsource/inter-tight/400.css';
+@import '@fontsource/inter-tight/500.css';
+@import '@fontsource/inter-tight/600.css';
+@import '@fontsource/inter-tight/700.css';
+@import '@fontsource/ibm-plex-sans/400.css';
+@import '@fontsource/ibm-plex-sans/500.css';
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Inter Tight', sans-serif;
+  --font-sans: 'IBM Plex Sans', sans-serif;
+  --color-ink: #000000;
+  --color-paper: #f4f1ec;
+  --color-accent: #0a3dff;
+  --color-muted: #6a6a6a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.reveal-clip {
+  display: block;
+  overflow: hidden;
+}
+
+.reveal {
+  display: block;
+  animation: hero-reveal 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes hero-reveal {
+  from {
+    transform: translateY(108%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.5rem;
+}

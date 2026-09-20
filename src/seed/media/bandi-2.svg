@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img">
+  <rect width="1600" height="1000" fill="#F4F1EC"/>
+  <rect x="0" y="0" width="800" height="1000" fill="#000"/>
+  <text x="80" y="120" fill="#F4F1EC" font-family="Arial, sans-serif" font-size="14" letter-spacing="6">02  /  CAMPAIGN</text>
+  <text x="80" y="220" fill="#F4F1EC" font-family="Arial, sans-serif" font-size="64" font-weight="700">BANDI</text>
+  <text x="80" y="290" fill="#F4F1EC" font-family="Arial, sans-serif" font-size="24">Menswear. 500M ’ 1B CZK.</text>
+  <rect x="80" y="360" width="120" height="8" fill="#0A3DFF"/>
+  <g fill="none" stroke="#F4F1EC" stroke-width="1">
+    <rect x="900" y="120" width="280" height="360"/>
+    <rect x="1220" y="120" width="280" height="360"/>
+    <rect x="900" y="520" width="280" height="360"/>
+    <rect x="1220" y="520" width="280" height="360"/>
+  </g>
+  <rect x="900" y="120" width="280" height="360" fill="#000"/>
+  <rect x="1220" y="520" width="280" height="360" fill="#000"/>
+</svg>
