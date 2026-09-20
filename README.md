@@ -12,8 +12,8 @@ pnpm install
 pnpm dev
 ```
 
-- Site: http://localhost:3000
-- Admin: http://localhost:3000/admin
+- Site: http://localhost:3010
+- Admin: http://localhost:3010/admin
 
 First boot seeds four case studies, stats, skills, clients, and an admin user from `PAYLOAD_ADMIN_EMAIL` / `PAYLOAD_ADMIN_PASSWORD`.
 
