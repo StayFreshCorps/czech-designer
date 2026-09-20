@@ -7,7 +7,7 @@ export function Hero({ site, clients }: { site: Site; clients: Client[] }) {
   const lines = (site.headline || '').split('\n').filter(Boolean)
 
   return (
-    <section className="relative overflow-hidden bg-paper">
+    <section className="relative overflow-hidden bg-paper text-ink">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <svg className="h-full w-full" viewBox="0 0 1440 820" preserveAspectRatio="none">
           <path d="M780 0 L1440 90 L1440 820 L640 820 Z" fill="none" stroke="black" strokeOpacity="0.08" />
