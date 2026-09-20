@@ -1,60 +1,73 @@
-import type { Site } from '@/payload-types'
+import Image from 'next/image'
 
-export function Hero({ site }: { site: Site }) {
+import { Button, Shell } from '@/components/ui'
+import type { Client, Site } from '@/payload-types'
+
+export function Hero({ site, clients }: { site: Site; clients: Client[] }) {
   const lines = (site.headline || '').split('\n').filter(Boolean)
 
   return (
-    <section className="relative overflow-hidden border-b border-ink/10">
-      <div className="pointer-events-none absolute inset-0">
-        <svg className="h-full w-full" viewBox="0 0 1440 720" preserveAspectRatio="none" aria-hidden>
-          <path d="M920 0 L1440 0 L1440 720 L780 720 Z" fill="none" stroke="black" strokeOpacity="0.08" />
-          <path d="M1080 0 L1440 220" fill="none" stroke="black" strokeOpacity="0.12" />
-          <path d="M960 80 L1440 80" fill="none" stroke="black" strokeOpacity="0.08" />
+    <section className="relative overflow-hidden bg-paper">
+      <div className="pointer-events-none absolute inset-0" aria-hidden>
+        <svg className="h-full w-full" viewBox="0 0 1440 820" preserveAspectRatio="none">
+          <path d="M780 0 L1440 90 L1440 820 L640 820 Z" fill="none" stroke="black" strokeOpacity="0.08" />
+          <path d="M920 0 L1440 180" fill="none" stroke="black" strokeOpacity="0.1" />
+          <path d="M0 96 H1440" fill="none" stroke="black" strokeOpacity="0.06" />
         </svg>
       </div>
-      <div className="relative mx-auto max-w-[1440px] px-6 py-20 lg:px-16 lg:py-28">
-        <div className="grid-12 items-end">
-          <div className="col-span-12 lg:col-span-8">
-            <p className="mb-8 text-[11px] font-medium tracking-[0.28em] uppercase text-muted">Portfolio</p>
-            <h1 className="font-display text-[42px] leading-[0.95] font-semibold tracking-[-0.04em] sm:text-[61px] lg:text-[95px]">
-              {lines.map((line, index) => (
-                <span className="reveal-clip" key={line}>
-                  <span className="reveal" style={{ animationDelay: `${index * 90}ms` }}>
-                    {line}
-                  </span>
+
+      <Shell className="relative grid items-center gap-12 py-16 lg:grid-cols-12 lg:gap-0 lg:py-0 lg:min-h-[780px]">
+        <div className="lg:col-span-6 lg:pr-12 lg:py-24">
+          <p className="mb-7 text-[11px] font-medium tracking-[0.32em] uppercase text-muted">
+            Senior designer
+          </p>
+          <h1 className="font-display text-[52px] leading-[0.9] font-semibold tracking-[-0.05em] sm:text-[72px] lg:text-[88px]">
+            {lines.map((line, index) => (
+              <span className="reveal-clip" key={line}>
+                <span className="reveal" style={{ animationDelay: `${index * 90}ms` }}>
+                  {line}
                 </span>
-              ))}
-            </h1>
-            <p
-              className="reveal mt-8 max-w-xl text-[15px] text-muted"
-              style={{ animationDelay: '280ms' }}
-            >
-              {site.subheadline}
-            </p>
-            <a
-              href="#work"
-              className="mt-10 inline-flex items-center bg-ink px-6 py-3 text-[13px] font-medium tracking-wide text-paper hover:bg-accent"
-            >
-              View Work ↓
-            </a>
+              </span>
+            ))}
+          </h1>
+          <p className="reveal mt-7 max-w-md text-[15px] leading-7 text-muted" style={{ animationDelay: '220ms' }}>
+            {site.subheadline}
+          </p>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Button href={`mailto:${site.email}`}>Email Petr</Button>
+            <Button href={site.linkedin} variant="ghost">
+              LinkedIn
+            </Button>
           </div>
-          <div className="col-span-12 mt-16 lg:col-span-4 lg:mt-0">
-            <div className="flex h-full min-h-[220px] flex-col justify-between border border-ink/10 p-6">
-              <p className="text-[11px] tracking-[0.24em] uppercase text-muted">Experience</p>
-              <p className="font-display text-[61px] leading-none font-semibold tracking-[-0.05em]">25+</p>
-              <p className="max-w-[16rem] text-[14px] text-muted">
-                Years shipping brand systems, print and AI production.
-              </p>
+        </div>
+
+        <div className="relative lg:col-span-6 lg:h-[780px]">
+          <div className="relative aspect-[3/4] overflow-hidden rounded-[28px] lg:absolute lg:inset-y-10 lg:right-0 lg:aspect-auto lg:w-[92%]">
+            <Image
+              src="/images/hero.png"
+              alt="Editorial menswear still — campaign photography"
+              fill
+              priority
+              className="object-cover object-[center_20%]"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+            />
+            <div className="absolute right-6 bottom-6 rounded-2xl bg-paper/92 px-5 py-4 backdrop-blur-sm lg:right-8 lg:bottom-8">
+              <p className="font-display text-[42px] leading-none font-semibold tracking-[-0.05em]">25+</p>
+              <p className="mt-1 text-[12px] tracking-wide text-muted">Years in production</p>
             </div>
           </div>
         </div>
-        <div className="mt-16 flex flex-wrap items-center gap-8 border-t border-ink/10 pt-8 text-[13px] text-muted">
-          <span>Ostrava → Worldwide</span>
-          <span className="hidden h-3 w-px bg-ink/20 sm:block" />
-          <span>Remote-ready</span>
-          <span className="hidden h-3 w-px bg-ink/20 sm:block" />
-          <span>NL · DE · CH · UK</span>
-        </div>
+      </Shell>
+
+      <div className="relative border-t border-ink/8">
+        <Shell className="flex flex-wrap items-center gap-x-8 gap-y-3 py-6 text-[13px] text-muted">
+          <span className="tracking-[0.2em] uppercase">Selected clients</span>
+          {clients.slice(0, 4).map((client) => (
+            <span key={client.id} className="text-ink">
+              {client.name}
+            </span>
+          ))}
+        </Shell>
       </div>
     </section>
   )

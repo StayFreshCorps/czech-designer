@@ -5,10 +5,15 @@ export async function getPayloadClient() {
   return getPayload({ config })
 }
 
+export async function getSite() {
+  const payload = await getPayloadClient()
+  return payload.findGlobal({ slug: 'site' })
+}
+
 export async function getHomeData() {
   const payload = await getPayloadClient()
 
-  const [site, projects, skills, stats, clients] = await Promise.all([
+  const [site, projects, stats, clients] = await Promise.all([
     payload.findGlobal({ slug: 'site' }),
     payload.find({
       collection: 'projects',
@@ -17,15 +22,13 @@ export async function getHomeData() {
       depth: 2,
       limit: 4,
     }),
-    payload.find({ collection: 'skills', sort: 'order', limit: 20 }),
-    payload.find({ collection: 'stats', sort: 'order', limit: 20 }),
+    payload.find({ collection: 'stats', sort: 'order', limit: 6 }),
     payload.find({ collection: 'clients', sort: 'order', depth: 1, limit: 20 }),
   ])
 
   return {
     site,
     projects: projects.docs,
-    skills: skills.docs,
     stats: stats.docs,
     clients: clients.docs,
   }

@@ -30,6 +30,6 @@ describe('API', () => {
   it('loads site settings', async () => {
     const site = await payload.findGlobal({ slug: 'site' })
     expect(site.email).toBe('petr@czechdesigner.com')
-    expect(site.headline).toContain('Senior Designer')
+    expect(site.headline).toContain('THE WORK')
   })
 })

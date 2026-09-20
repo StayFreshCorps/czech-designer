@@ -1,6 +1,6 @@
 # czechdesigner.com
 
-Portfolio for **Petr Kaloč** — senior graphic designer, brand systems, AI visual production.
+Portfolio for **Petr Kaloč** — senior graphic designer.
 
 Stack: Payload CMS 3 + Next.js App Router + Tailwind CSS + SQLite.
 
@@ -15,7 +15,7 @@ pnpm dev
 - Site: http://localhost:3000
 - Admin: http://localhost:3000/admin
 
-First boot seeds the four case studies, stats, skills, clients, and an admin user from `PAYLOAD_ADMIN_EMAIL` / `PAYLOAD_ADMIN_PASSWORD`.
+First boot seeds four case studies, stats, skills, clients, and an admin user from `PAYLOAD_ADMIN_EMAIL` / `PAYLOAD_ADMIN_PASSWORD`.
 
 ## Production (Hostinger VPS)
 
@@ -26,4 +26,4 @@ First boot seeds the four case studies, stats, skills, clients, and an admin use
 5. Switch `src/app/(frontend)/robots.ts` from `disallow: '/'` to allow indexing when you launch.
 6. Set `NEXT_PUBLIC_PLAUSIBLE_DOMAIN=czechdesigner.com` for Plausible.
 
-Replace the seeded SVG case-study frames with BANDI / print / campaign photography in `/admin`.
+Replace seeded case-study photography in `/admin` with production stills.

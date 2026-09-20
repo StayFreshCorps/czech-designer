@@ -1,16 +1,19 @@
+import { Shell } from '@/components/ui'
 import type { Client } from '@/payload-types'
 
 export function Clients({ clients }: { clients: Client[] }) {
+  if (clients.length === 0) return null
+
   return (
-    <section className="border-t border-ink/10 bg-paper">
-      <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-16">
-        <p className="text-[11px] tracking-[0.28em] uppercase text-muted">Selected clients and collaborators</p>
-        <ul className="mt-8 flex flex-wrap gap-x-10 gap-y-4 text-[16px]">
+    <section className="bg-ink text-paper">
+      <Shell className="pb-20 lg:pb-28">
+        <p className="text-[11px] tracking-[0.28em] uppercase text-paper/40">Clients</p>
+        <ul className="mt-8 flex flex-wrap gap-x-10 gap-y-4 text-[18px] text-paper/80">
           {clients.map((client) => (
             <li key={client.id}>{client.name}</li>
           ))}
         </ul>
-      </div>
+      </Shell>
     </section>
   )
 }

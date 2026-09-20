@@ -9,7 +9,7 @@
 @theme {
   --font-display: 'Inter Tight', sans-serif;
   --font-sans: 'IBM Plex Sans', sans-serif;
-  --color-ink: #000000;
+  --color-ink: #0c0c0c;
   --color-paper: #f4f1ec;
   --color-accent: #0a3dff;
   --color-muted: #6a6a6a;
@@ -17,11 +17,12 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--color-paper);
-  color: var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-paper);
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.5;
@@ -50,10 +51,4 @@ body {
   to {
     transform: translateY(0);
   }
-}
-
-.grid-12 {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 1.5rem;
 }

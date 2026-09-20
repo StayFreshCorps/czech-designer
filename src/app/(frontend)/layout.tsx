@@ -3,7 +3,7 @@ import Script from 'next/script'
 
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
-import { getHomeData } from '@/lib/site'
+import { getSite } from '@/lib/site'
 import './styles.css'
 
 const siteUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://czechdesigner.com'
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const { site } = await getHomeData()
+  const site = await getSite()
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -52,7 +52,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang="en">
-      <body className="font-sans">
+      <body className="bg-ink font-sans text-paper">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN ? (
           <Script
@@ -61,7 +61,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             src="https://plausible.io/js/script.js"
           />
         ) : null}
-        <Header />
+        <Header email={site.email} />
         <main>{children}</main>
         <Footer site={site} />
       </body>

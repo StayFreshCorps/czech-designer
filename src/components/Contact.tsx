@@ -1,30 +1,35 @@
+import Image from 'next/image'
+
+import { Button, Shell } from '@/components/ui'
 import type { Site } from '@/payload-types'
 
 export function Contact({ site }: { site: Site }) {
   return (
-    <section id="contact" className="relative overflow-hidden bg-ink text-paper">
-      <div className="mx-auto max-w-[1440px] px-6 py-28 lg:px-16 lg:py-36">
-        <h2 className="max-w-4xl font-display text-[42px] leading-[0.95] font-semibold tracking-[-0.04em] lg:text-[95px]">
-          Available for senior remote or hybrid roles.
-          <br />
+    <section id="contact" className="relative isolate overflow-hidden bg-ink text-paper">
+      <div className="absolute inset-0">
+        <Image
+          src="/images/contact.png"
+          alt=""
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/25" />
+      </div>
+      <Shell className="relative flex min-h-[520px] flex-col justify-end py-20 lg:min-h-[640px] lg:py-24">
+        <h2 className="max-w-3xl font-display text-[52px] leading-[0.9] font-semibold tracking-[-0.05em] lg:text-[88px]">
           Let&apos;s talk.
         </h2>
-        <div className="mt-12 flex flex-wrap gap-4">
-          <a
-            href={`mailto:${site.email}`}
-            className="bg-paper px-6 py-3 text-[13px] font-medium tracking-wide text-ink hover:bg-accent hover:text-paper"
-          >
-            Send email
-          </a>
-          <a
-            href={site.linkedin}
-            className="border border-paper/30 px-6 py-3 text-[13px] font-medium tracking-wide hover:border-accent hover:text-accent"
-          >
+        <p className="mt-6 max-w-lg text-[16px] leading-7 text-paper/75">{site.availabilityNote}</p>
+        <div className="mt-10 flex flex-wrap gap-3">
+          <Button href={`mailto:${site.email}`} invert>
+            {site.email}
+          </Button>
+          <Button href={site.linkedin} variant="ghost" invert>
             LinkedIn
-          </a>
+          </Button>
         </div>
-        <p className="mt-10 text-[14px] text-paper/55">{site.availabilityNote}</p>
-      </div>
+      </Shell>
     </section>
   )
 }
