@@ -44,7 +44,7 @@ export function Services() {
           {practices.map((item) => (
             <article
               key={item.title}
-              className="rounded-[28px] border border-paper/10 bg-paper/4 px-8 py-10"
+              className="rounded-panel bg-paper/4 px-6 py-7"
             >
               <div className="text-paper/70">{item.icon}</div>
               <h3 className="mt-8 font-display text-[22px] font-medium tracking-[-0.015em]">{item.title}</h3>

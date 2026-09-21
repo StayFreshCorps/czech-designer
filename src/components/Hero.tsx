@@ -42,7 +42,7 @@ export function Hero({ site, clients }: { site: Site; clients: Client[] }) {
         </div>
 
         <div className="relative lg:col-span-6 lg:h-[780px]">
-          <div className="relative aspect-[3/4] overflow-hidden rounded-[28px] lg:absolute lg:inset-y-10 lg:right-0 lg:aspect-auto lg:w-[92%]">
+          <div className="relative aspect-[3/4] overflow-hidden rounded-panel lg:absolute lg:inset-y-10 lg:right-0 lg:aspect-auto lg:w-[92%]">
             <Image
               src="/images/hero.png"
               alt="Editorial menswear still — campaign photography"
@@ -51,7 +51,7 @@ export function Hero({ site, clients }: { site: Site; clients: Client[] }) {
               className="object-cover object-[center_20%]"
               sizes="(min-width: 1024px) 50vw, 100vw"
             />
-            <div className="absolute right-6 bottom-6 rounded-2xl bg-paper/92 px-5 py-4 backdrop-blur-sm lg:right-8 lg:bottom-8">
+            <div className="absolute right-6 bottom-6 rounded-inset bg-paper/92 px-4 py-3 backdrop-blur-sm lg:right-8 lg:bottom-8">
               <p className="font-display text-[42px] leading-none font-medium tracking-[-0.03em]">25+</p>
               <p className="mt-1 text-[12px] tracking-wide text-muted">Years in production</p>
             </div>

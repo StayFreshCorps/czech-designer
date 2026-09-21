@@ -49,7 +49,7 @@ export default async function ProjectPage({ params }: Args) {
             if (!url) return null
             const alt = image && typeof image === 'object' && 'alt' in image ? image.alt : project.title
             return (
-              <div key={index} className="relative aspect-[16/10] overflow-hidden rounded-[28px] bg-paper/5">
+              <div key={index} className="relative aspect-[16/10] overflow-hidden rounded-panel bg-paper/5">
                 <Image src={url} alt={alt || project.title} fill className="object-cover" sizes="100vw" />
               </div>
             )

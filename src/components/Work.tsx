@@ -29,9 +29,9 @@ export function Work({ projects }: { projects: Project[] }) {
 
         <Link
           href={`/work/${featured.slug}`}
-          className="group mt-14 grid items-center gap-8 rounded-[28px] border border-paper/10 bg-paper/4 p-4 lg:grid-cols-12 lg:gap-12 lg:p-6"
+          className="group mt-14 grid items-center gap-8 rounded-panel bg-paper/4 p-3 lg:grid-cols-12 lg:gap-10 lg:p-4"
         >
-          <div className="relative aspect-[16/10] overflow-hidden rounded-[20px] lg:col-span-7">
+          <div className="relative aspect-[16/10] overflow-hidden rounded-inset lg:col-span-7">
             {featuredCover.url ? (
               <Image
                 src={featuredCover.url}
@@ -60,9 +60,9 @@ export function Work({ projects }: { projects: Project[] }) {
               <Link
                 key={project.id}
                 href={`/work/${project.slug}`}
-                className="group rounded-[28px] border border-paper/10 bg-paper/4 p-4"
+                className="group rounded-panel bg-paper/4 p-3"
               >
-                <div className="relative aspect-[4/3] overflow-hidden rounded-[20px]">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-inset">
                   {url ? (
                     <Image
                       src={url}

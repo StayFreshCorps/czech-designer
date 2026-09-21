@@ -13,6 +13,9 @@
   --color-paper: #f4f1ec;
   --color-accent: #0a3dff;
   --color-muted: #6a6a6a;
+  --radius-panel: 1.375rem;
+  --radius-panel-lg: 1.625rem;
+  --radius-inset: 1rem;
 }
 
 html {

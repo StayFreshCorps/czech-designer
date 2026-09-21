@@ -9,7 +9,7 @@ export function About({ site, stats }: { site: Site; stats: Stat[] }) {
   return (
     <section id="about" className="bg-ink text-paper">
       <Shell className="grid items-center gap-12 py-20 lg:grid-cols-12 lg:gap-16 lg:py-28">
-        <div className="relative aspect-square overflow-hidden rounded-[32px] lg:col-span-5 lg:aspect-[4/5]">
+        <div className="relative aspect-square overflow-hidden rounded-panel-lg lg:col-span-5 lg:aspect-[4/5]">
           <Image
             src="/images/about.png"
             alt="Sculptural visor — production still"
