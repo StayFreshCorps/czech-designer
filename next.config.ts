@@ -8,6 +8,7 @@ const dirname = path.dirname(__filename)
 
 const nextConfig: NextConfig = {
   agentRules: false,
+  allowedDevOrigins: ['127.0.0.1', 'localhost'],
   images: {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
