@@ -21,7 +21,7 @@ export function Hero({ site, clients }: { site: Site; clients: Client[] }) {
           <p className="mb-7 text-[11px] font-medium tracking-[0.32em] uppercase text-muted">
             Senior designer
           </p>
-          <h1 className="font-display text-[52px] leading-[0.9] font-semibold tracking-[-0.05em] sm:text-[72px] lg:text-[88px]">
+          <h1 className="font-display text-[52px] leading-[0.9] font-medium tracking-[-0.03em] sm:text-[72px] lg:text-[88px]">
             {lines.map((line, index) => (
               <span className="reveal-clip" key={line}>
                 <span className="reveal" style={{ animationDelay: `${index * 90}ms` }}>
@@ -52,7 +52,7 @@ export function Hero({ site, clients }: { site: Site; clients: Client[] }) {
               sizes="(min-width: 1024px) 50vw, 100vw"
             />
             <div className="absolute right-6 bottom-6 rounded-2xl bg-paper/92 px-5 py-4 backdrop-blur-sm lg:right-8 lg:bottom-8">
-              <p className="font-display text-[42px] leading-none font-semibold tracking-[-0.05em]">25+</p>
+              <p className="font-display text-[42px] leading-none font-medium tracking-[-0.03em]">25+</p>
               <p className="mt-1 text-[12px] tracking-wide text-muted">Years in production</p>
             </div>
           </div>

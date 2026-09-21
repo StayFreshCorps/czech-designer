@@ -39,7 +39,7 @@ export default async function ProjectPage({ params }: Args) {
           ← Work
         </Link>
         <p className="mt-10 text-[11px] tracking-[0.24em] uppercase text-paper/40">{project.client}</p>
-        <h1 className="mt-4 max-w-4xl font-display text-[42px] leading-[0.95] font-semibold tracking-[-0.04em] lg:text-[72px]">
+        <h1 className="mt-4 max-w-4xl font-display text-[42px] leading-[0.95] font-medium tracking-[-0.02em] lg:text-[72px]">
           {project.title}
         </h1>
         <p className="mt-8 max-w-2xl text-[18px] leading-8 text-paper/70">{project.outcome}</p>

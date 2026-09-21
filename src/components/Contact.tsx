@@ -17,7 +17,7 @@ export function Contact({ site }: { site: Site }) {
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/25" />
       </div>
       <Shell className="relative flex min-h-[520px] flex-col justify-end py-20 lg:min-h-[640px] lg:py-24">
-        <h2 className="max-w-3xl font-display text-[52px] leading-[0.9] font-semibold tracking-[-0.05em] lg:text-[88px]">
+        <h2 className="max-w-3xl font-display text-[52px] leading-[0.9] font-medium tracking-[-0.03em] lg:text-[88px]">
           Let&apos;s talk.
         </h2>
         <p className="mt-6 max-w-lg text-[16px] leading-7 text-paper/75">{site.availabilityNote}</p>
