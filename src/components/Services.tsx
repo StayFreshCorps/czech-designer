@@ -37,7 +37,7 @@ export function Services() {
   return (
     <section id="practice" className="bg-ink text-paper">
       <Shell className="pb-20 lg:pb-28">
-          <h2 className="font-display text-[42px] leading-[0.92] font-medium tracking-[-0.02em] lg:text-[64px]">
+        <h2 className="font-display text-[42px] leading-[0.92] font-medium tracking-[-0.02em] lg:text-[64px]">
           Practice
         </h2>
         <div className="mt-12 grid gap-5 lg:grid-cols-3">
