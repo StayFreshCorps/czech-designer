@@ -32,6 +32,22 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+h1,
+h2,
+h3,
+.font-display {
+  letter-spacing: 0.02em;
+}
+
+h1,
+h2 {
+  line-height: 1.1;
+}
+
+h3 {
+  line-height: 1.22;
+}
+
 ::selection {
   background: var(--color-accent);
   color: #fff;

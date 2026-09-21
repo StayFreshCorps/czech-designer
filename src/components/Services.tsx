@@ -37,7 +37,7 @@ export function Services() {
   return (
     <section id="practice" className="bg-ink text-paper">
       <Shell className="pb-20 lg:pb-28">
-        <h2 className="font-display text-[42px] leading-[0.92] font-medium tracking-[-0.02em] lg:text-[64px]">
+        <h2 className="font-display text-[42px] font-medium lg:text-[64px]">
           Practice
         </h2>
         <div className="mt-12 grid gap-5 lg:grid-cols-3">
@@ -47,7 +47,7 @@ export function Services() {
               className="rounded-panel bg-paper/4 px-6 py-7"
             >
               <div className="text-paper/70">{item.icon}</div>
-              <h3 className="mt-8 font-display text-[22px] font-medium tracking-[-0.015em]">{item.title}</h3>
+              <h3 className="mt-8 font-display text-[22px] font-medium">{item.title}</h3>
               <p className="mt-4 max-w-sm text-[14px] leading-6 text-paper/55">{item.copy}</p>
             </article>
           ))}

@@ -43,7 +43,7 @@ export function Footer({ site }: { site: Site }) {
           </div>
         </div>
         <div className="lg:text-right">
-          <p className="font-display text-[18px] leading-tight font-medium tracking-[-0.015em]">Petr Kaloč</p>
+          <p className="font-display text-[18px] font-medium">Petr Kaloč</p>
           <p className="mt-3 text-[13px] text-paper/45">czechdesigner.com</p>
         </div>
       </Shell>

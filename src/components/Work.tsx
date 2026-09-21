@@ -21,7 +21,7 @@ export function Work({ projects }: { projects: Project[] }) {
   return (
     <section id="work" className="bg-ink text-paper">
       <Shell className="pb-20 lg:pb-28">
-        <h2 className="max-w-3xl font-display text-[42px] leading-[0.92] font-medium tracking-[-0.02em] lg:text-[64px]">
+        <h2 className="max-w-3xl font-display text-[42px] font-medium lg:text-[64px]">
           Selected work.
           <br />
           Outcomes, not moodboards.
@@ -46,7 +46,7 @@ export function Work({ projects }: { projects: Project[] }) {
             <p className="text-[11px] tracking-[0.22em] uppercase text-paper/40">
               01 / {featured.client}
             </p>
-            <h3 className="mt-4 font-display text-[28px] leading-tight font-medium tracking-[-0.015em] group-hover:text-accent lg:text-[36px]">
+            <h3 className="mt-4 font-display text-[28px] font-medium group-hover:text-accent lg:text-[36px]">
               {featured.title}
             </h3>
             <p className="mt-4 max-w-md text-[15px] leading-7 text-paper/65">{featured.outcome}</p>
@@ -76,7 +76,7 @@ export function Work({ projects }: { projects: Project[] }) {
                 <p className="mt-5 text-[11px] tracking-[0.2em] uppercase text-paper/40">
                   {String(index + 2).padStart(2, '0')} / {project.client}
                 </p>
-                <h3 className="mt-2 font-display text-[20px] leading-tight font-medium tracking-[-0.015em] group-hover:text-accent">
+                <h3 className="mt-2 font-display text-[20px] font-medium group-hover:text-accent">
                   {project.title}
                 </h3>
                 <p className="mt-3 text-[14px] leading-6 text-paper/55">{project.outcome}</p>

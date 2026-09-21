@@ -26,7 +26,7 @@ export function Header({ email }: { email: string }) {
     <header className="sticky top-0 z-50 border-b border-ink/8 bg-paper/90 text-ink backdrop-blur-md">
       <div className="mx-auto flex max-w-[1440px] flex-col px-6 lg:px-16">
         <div className="flex h-16 items-center justify-between lg:h-[72px]">
-          <Link href="/" className="font-display text-[15px] font-medium tracking-[-0.01em]">
+          <Link href="/" className="font-display text-[15px] font-medium">
             Petr Kaloč
           </Link>
           <Nav className="hidden items-center gap-8 text-[13px] tracking-wide md:flex" />

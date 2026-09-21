@@ -21,7 +21,7 @@ export function About({ site, stats }: { site: Site; stats: Stat[] }) {
 
         <div className="lg:col-span-7">
           <p className="text-[11px] tracking-[0.28em] uppercase text-paper/40">About</p>
-          <h2 className="mt-4 font-display text-[42px] leading-[0.92] font-medium tracking-[-0.02em] lg:text-[64px]">
+          <h2 className="mt-4 font-display text-[42px] font-medium lg:text-[64px]">
             The production
             <br />
             layer
@@ -37,7 +37,7 @@ export function About({ site, stats }: { site: Site; stats: Stat[] }) {
           <dl className="mt-10 grid grid-cols-3 gap-6">
             {stats.slice(0, 3).map((stat) => (
               <div key={stat.id}>
-                <dt className="font-display text-[28px] leading-none font-medium tracking-[-0.02em] lg:text-[36px]">
+                <dt className="font-display text-[28px] leading-none font-medium lg:text-[36px]">
                   {stat.value}
                 </dt>
                 <dd className="mt-2 text-[12px] leading-5 text-paper/45">{stat.label}</dd>
