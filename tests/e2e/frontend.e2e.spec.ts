@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test.describe('Frontend', () => {
   test('homepage converts a recruiter in one scroll', async ({ page }) => {
-    await page.goto('http://localhost:3010')
+    await page.goto('http://localhost:3111')
 
     await expect(page).toHaveTitle(/Petr Kaloč/)
     await expect(page.getByRole('heading', { level: 1 })).toContainText('THE WORK')
