@@ -29,8 +29,7 @@ install() {
   <key>ProgramArguments</key>
   <array>
     <string>/bin/bash</string>
-    <string>-lc</string>
-    <string>cd "${ROOT}" && exec pnpm dev</string>
+    <string>${ROOT}/scripts/run-dev.sh</string>
   </array>
   <key>RunAtLoad</key>
   <true/>

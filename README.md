@@ -18,10 +18,13 @@ pnpm dev
 To keep 3111 up like podekovani (survives closing the terminal and sleeping the Mac), from this repo only:
 
 ```bash
+git pull
 pnpm persist
+sleep 8
+open http://localhost:3111
 ```
 
-Do not run that from `podekovani`. Do not kill port 3002. `pnpm persist:off` removes the keep-alive.
+If the browser says error -102, nothing is listening on your Mac. Check `cat .persist/next.log`. Do not run persist from `podekovani`. Do not kill port 3002. `pnpm persist:off` removes the keep-alive.
 
 First boot seeds four case studies, stats, skills, clients, and an admin user from `PAYLOAD_ADMIN_EMAIL` / `PAYLOAD_ADMIN_PASSWORD`.
 
