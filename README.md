@@ -26,6 +26,12 @@ open http://localhost:3111
 
 If the browser says error -102, nothing is listening on your Mac. Check `cat .persist/next.log`. Do not run persist from `podekovani`. Do not kill port 3002. `pnpm persist:off` removes the keep-alive.
 
+GitHub is the backup. `git clone` / `git pull` only copies down. They do not delete the GitHub repo. To save local work back up:
+
+```bash
+pnpm backup
+```
+
 First boot seeds four case studies, stats, skills, clients, and an admin user from `PAYLOAD_ADMIN_EMAIL` / `PAYLOAD_ADMIN_PASSWORD`.
 
 ## Production (Hostinger VPS)
