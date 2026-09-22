@@ -12,8 +12,16 @@ pnpm install
 pnpm dev
 ```
 
-- Site: http://localhost:3111 (not 3000 or 3010)
+- Site: http://localhost:3111 (not 3000, 3002, or 3010)
 - Admin: http://localhost:3111/admin
+
+To keep 3111 up like podekovani (survives closing the terminal and sleeping the Mac), from this repo only:
+
+```bash
+pnpm persist
+```
+
+Do not run that from `podekovani`. Do not kill port 3002. `pnpm persist:off` removes the keep-alive.
 
 First boot seeds four case studies, stats, skills, clients, and an admin user from `PAYLOAD_ADMIN_EMAIL` / `PAYLOAD_ADMIN_PASSWORD`.
 
